@@ -26,6 +26,8 @@ jobs:
           app_id: ${{ vars.DEMO_SERVER_APP_ID }}
           app_private_key: ${{ secrets.DEMO_SERVER_PRIVATE_KEY }}
           config_file: config.yaml
+          allow_workflow_fix: true
+          workflow_name: ""
       - uses: csm-actions/securefix-action/server/commit@7631c011cad178ac45d0580119ab838c97af6908 # v0.3.2
         with:
           outputs: ${{ toJson(steps.prepare.outputs) }}
