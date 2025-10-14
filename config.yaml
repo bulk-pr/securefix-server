@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/csm-actions/securefix-action/refs/tags/v0.3.2/json-schema/config.json
+entries:
+  - client:
+      repositories:
+        - bulk-pr/bulk-pr
+      branches:
+        - main
+    push:
+      repositories:
+        - bulk-pr/test-1
+      branches:
+        - bulk-pr/*
+    pull_request:
+      base_branches:
+        - main
