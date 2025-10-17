@@ -9,7 +9,7 @@ entries:
       repositories:
         - bulk-pr/test-1
       branches:
-        - bulk-pr/*
+        - bulk-pr/**
     pull_request:
       base_branches:
         - main
