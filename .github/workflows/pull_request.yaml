@@ -14,7 +14,7 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             config.yaml
-      - uses: csm-actions/securefix-action/js@70c01dc077f426b39fc8e2f5e52f1f01a61f9798 # v0.3.5
+      - uses: csm-actions/securefix-action/js@4f3e711a06d7d5a3f5527cc622f6c75362fec74b # v0.3.6
         with:
           action: validate-config
           config_file: config.yaml
