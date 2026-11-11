@@ -20,7 +20,7 @@ jobs:
           sparse-checkout: |
             config.yaml
           sparse-checkout-cone-mode: false
-      - uses: csm-actions/securefix-action@6da661e4377faf2d71294c1c09b1c03c161ce7c1 # v0.6.8
+      - uses: csm-actions/securefix-action@75f446c03c22cc2cfc1c944577dfd0dac5111738 # v0.7.0
         id: prepare
         with:
           action: prepare
@@ -29,11 +29,11 @@ jobs:
           config_file: config.yaml
           allow_workflow_fix: true
           workflow_name: ""
-      - uses: csm-actions/securefix-action@6da661e4377faf2d71294c1c09b1c03c161ce7c1 # v0.6.8
+      - uses: csm-actions/securefix-action@75f446c03c22cc2cfc1c944577dfd0dac5111738 # v0.7.0
         with:
           action: commit
           outputs: ${{ toJson(steps.prepare.outputs) }}
-      - uses: csm-actions/securefix-action@6da661e4377faf2d71294c1c09b1c03c161ce7c1 # v0.6.8
+      - uses: csm-actions/securefix-action@75f446c03c22cc2cfc1c944577dfd0dac5111738 # v0.7.0
         if: failure()
         with:
           action: notify
